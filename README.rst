@@ -39,5 +39,3 @@ Copyright (c) 2022 Christopher McDonald
 Distributed under the terms of the
 `MIT <https://github.com/chris-mcdo/sysexits/blob/main/LICENSE>`_
 license.
-
-All overcomingbias posts are copyright the original authors.
