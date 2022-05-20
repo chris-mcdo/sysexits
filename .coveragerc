@@ -1,0 +1,8 @@
+[run]
+include = 
+  sysexits/*
+  */lib/python*/site-packages/sysexits/*
+  *\Lib\site-packages\sysexits\*
+branch = True
+# parallel = True
+
