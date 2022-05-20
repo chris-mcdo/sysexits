@@ -1,6 +1,19 @@
 sysexits
 ========
 
+.. image:: https://github.com/chris-mcdo/sysexits/workflows/tests/badge.svg
+  :target: https://github.com/chris-mcdo/sysexits/actions?query=workflow%3Atests
+  :alt: Unit Tests
+
+.. image:: https://codecov.io/gh/chris-mcdo/sysexits/branch/main/graph/badge.svg
+  :target: https://codecov.io/gh/chris-mcdo/sysexits
+  :alt: Unit Test Coverage
+
+.. image:: https://img.shields.io/badge/license-MIT-purple
+  :target: https://github.com/chris-mcdo/sysexits/blob/main/LICENSE
+  :alt: MIT License
+
+
 A simple python wrapper around the FreeBSD
 `"preferable exit codes for programs" <https://www.freebsd.org/cgi/man.cgi?query=sysexits>`_.
 
