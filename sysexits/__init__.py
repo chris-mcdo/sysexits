@@ -28,10 +28,11 @@ def raise_for_returncode(process: CompletedProcess, msg: Optional[str]):
     else:
         if msg is not None:
             raise Exc(msg)
-        elif isinstance(process.stderr, str):
-            raise Exc(process.stderr)
-        else:
-            raise Exc()
+
+        if process.stderr is not None:
+            raise Exc(f"Process failed with message: {process.stderr.decode()}")
+
+        raise Exc()
 
 
 class UsageError(SubprocessError):
