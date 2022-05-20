@@ -1,8 +1,8 @@
-from subprocess import Popen, SubprocessError
+from subprocess import CompletedProcess, SubprocessError
 from typing import Optional
 
 
-def raise_for_returncode(process: Popen, msg: Optional[str]):
+def raise_for_returncode(process: CompletedProcess, msg: Optional[str]):
     """Raise an error if a completed process has non-zero exit code.
 
     Parameters
