@@ -2,7 +2,7 @@ from subprocess import CompletedProcess, SubprocessError
 from typing import Optional
 
 
-def raise_for_returncode(process: CompletedProcess, msg: Optional[str]):
+def raise_for_returncode(process: CompletedProcess, msg: Optional[str] = None):
     """Raise an error if a completed process has non-zero exit code.
 
     Parameters
@@ -29,8 +29,11 @@ def raise_for_returncode(process: CompletedProcess, msg: Optional[str]):
         if msg is not None:
             raise Exc(msg)
 
+        stderr = process.stderr
         if process.stderr is not None:
-            raise Exc(f"Process failed with message: {process.stderr.decode()}")
+            if isinstance(process.stderr, bytes):
+                stderr = stderr.decode()
+            raise Exc(f"Process failed with message: {stderr}")
 
         raise Exc()
 
